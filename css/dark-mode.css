@@ -1,0 +1,50 @@
+
+:root:has(.mode-group input:checked){
+
+    /* * colors * */
+    --clr-primary:rgb(193, 126, 31);
+    --clr-secondary: #fff;
+    --clr-h2:rgb(127, 127, 144);
+    --clr-dark:rgb(255, 255, 255);
+    --clr-light:rgb(23, 23, 23);
+    --clr-bg-secondary:rgb(37, 37, 37);
+    --clr-bg-secondary-contact:rgb(13, 13, 13);
+    --clr-bg-default:#202020;
+}
+
+body:has(.mode-group input:checked) ::selection {
+    background: #8B5C1A;
+    color: black;
+}
+
+body:has(.mode-group input:checked):has(#NavLinks:target) nav{
+    height: 100vh;
+    background-color: #0008;
+}
+
+body:has(.mode-group input:checked) .mode-group .light{
+    display: block;
+}
+
+body:has(.mode-group input:checked) .mode-group .dark{
+    display: none;
+}
+
+body:has(.mode-group input:checked) #Footer button:hover,
+body:has(.mode-group input:checked) #Contact .but:hover,
+body:has(.mode-group input:checked) #Home .buttons a:nth-child(1):hover{
+    background-color: #D78C23;            /* * Color-Hover * */
+}
+
+body:has(.mode-group input:checked) #Chefs .card .card-tittle::after {
+
+    background-image: url('../img/team-shape-dark.svg');
+}
+
+@media screen and (max-width:1200px){
+
+    body:has(.mode-group input:checked) nav ul li a:hover{
+        color: #7f7f90;
+    }
+
+}
